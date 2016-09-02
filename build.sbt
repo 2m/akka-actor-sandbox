@@ -1,7 +1,8 @@
-scalaVersion := "2.11.4"
+scalaVersion := "2.11.8"
 
 libraryDependencies ++= Seq(
-  "com.typesafe.akka" %% "akka-actor" % "2.3.7"
+  "com.typesafe.akka" %% "akka-actor" % "2.4.9"
 )
 
-updateOptions := updateOptions.value.withConsolidatedResolution(true)
+scalafmtConfig in ThisBuild := Some(file(".scalafmt"))
+reformatOnCompileSettings
